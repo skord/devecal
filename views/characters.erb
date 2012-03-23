@@ -1,10 +1,12 @@
 <div class='span10'>
 
-<% if @characters.length == 0%>
-    <p>You put in a crap API key. Try again. <a href='/characters'>Back</a>
-  <% else %>
+  <% if @characters %>
     <p>Copy the iCal link for the characters you want a calendar for, paste into your calendar or click it and download it. Downloading it kinda of defeats the purpose of the whole thing, so do yourself a favor and subscribe.</p>
     <% @characters.each do |character| %>
     <h4><%= character[:name] %> - <a href="/calendar/<%= @key_id %>/<%= @v_code %>/<%= character[:character_id] %>">iCal</a></h4>
+
+
+  <% else %>
+      <p>You put in a crap API key. Try again. <a href='/characters'>Back</a>
   <% end %>
 </div>
