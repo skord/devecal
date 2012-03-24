@@ -6,10 +6,14 @@ require 'ri_cal'
 require 'sanitize'
 
 get '/' do
+  # Five minute cache.
+  cache_control :public, :max_age => 300
   erb :index, :layout => :application
 end
 
 get '/characters/:keyID/:vCode' do 
+  # Five minute cache
+  cache_control :public, :max_age => 300
   @key_id = params[:keyID]
   @v_code = params[:vCode]
   @characters = get_characters(params[:keyID], params[:vCode])
