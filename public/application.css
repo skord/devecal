@@ -4,3 +4,10 @@ input {
 	line-height:18px;
 	font-size:13px;
 }
+
+div#footer{
+	margin-top:440px;
+	border-top:1px solid #E5E5E5;
+	padding-top:15px;
+	color:#333;
+}
