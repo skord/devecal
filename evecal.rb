@@ -5,6 +5,8 @@ require 'open-uri'
 require 'ri_cal'
 require 'sanitize'
 
+set :static_cache_control => [:public, :max_age => 300]
+
 get '/' do
   # Five minute cache.
   cache_control :public, :max_age => 300
