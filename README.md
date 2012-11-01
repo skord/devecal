@@ -12,7 +12,7 @@ No, I can't remember why I called this devecal. No clue.
 
 ### Contributing
 
-Fork on Bitbucket, open an issue explaining wtf changed and why and create a pull request.
+Fork on Github, open an issue explaining wtf changed and why and create a pull request.
 
 ### MOAR
 
